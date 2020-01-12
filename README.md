@@ -1,6 +1,7 @@
 # Forecaster
 
-[![Build](https://github.com/maxmaccari/forecaster/workflows/CI/badge.svg)](https://github.com/maxmaccari/forecaster/actions?query=workflow%3ACI)
+[![CI](https://github.com/maxmaccari/forecaster/workflows/CI/badge.svg)](https://github.com/maxmaccari/forecaster/actions?query=workflow%3ACI)
+[![Deploy](https://github.com/maxmaccari/forecaster/workflows/Deploy/badge.svg)](https://github.com/maxmaccari/forecaster/actions?query=workflow%3ADeploy)
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.

@@ -1,0 +1,40 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 8.0
+        uses: actions/setup-node@v1
+        with:
+          node-version: 8.0
+      - name: npm install, build, and test
+        run: |
+          npm ci
+          npm run build
+          npm test
+        env:
+          CI: true
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 8.0
+        uses: actions/setup-node@v1
+        with:
+          node-version: 8.0
+      - name: deploy to firebase
+        run: |
+          npm ci
+          npm run deploy $FIREBASE_TOKEN
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
