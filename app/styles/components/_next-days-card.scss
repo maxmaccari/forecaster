@@ -1,0 +1,58 @@
+.next-days-card {
+  background-color: $color-accent;
+  color: $color-white;
+  cursor: pointer;
+  opacity: 0.9;
+  padding: 8px;
+  width: 135px;
+  position: relative;
+
+  &::after {
+    content: ' ';
+    width: 16px;
+    height: 16px;
+    background-image: url('/icons/circle-right.svg');
+    background-size: contain;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__date {
+    font-size: 0.875em;
+    font-weight: 300;
+  }
+
+  &__icon {
+    display: block;
+    margin-top: 8px;
+    margin: auto;
+    width: 84px;
+  }
+
+  &__temperature {
+    font-size: 1.125em;
+    margin-top: 8px;
+  }
+  &__situation {
+    font-size: 0.685em;
+    font-weight: 300;
+    margin-top: 4px;
+  }
+  &__rain-chances {
+    font-size: 0.685em;
+    font-weight: 300;
+    margin-top: 4px;
+    opacity: 0.8;
+  }
+  &__low-temperature {
+    font-size: 0.685em;
+    font-weight: 300;
+    margin-top: 8px;
+    opacity: 0.8;
+  }
+}

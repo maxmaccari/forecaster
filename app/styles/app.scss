@@ -26,6 +26,7 @@
 @import 'components/forecast-daily';
 @import 'components/forecast-summary';
 @import 'components/inputs';
+@import 'components/next-days-card';
 @import 'components/panel';
 @import 'components/separator';
 
@@ -38,6 +39,7 @@
 //-------------
 // Pages
 //-------------
+@import 'pages/forecast';
 
 //-------------
 // Themes
