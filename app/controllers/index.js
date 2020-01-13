@@ -8,5 +8,6 @@ export default class IndexController extends Controller {
   @action
   goToForecast() {
     this.transitionToRoute('forecast.show', this.cityName);
+    this.cityName = '';
   }
 }
