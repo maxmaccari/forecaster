@@ -52,7 +52,6 @@ module('Integration | Component | forecast-daily', function(hooks) {
     await render(hbs`<ForecastDaily @forecast={{this.forecast}} />`);
 
     assert.equal(this.element.textContent.trim().includes('32º'), true);
-    assert.equal(this.element.textContent.trim().includes('5:00 PM'), true);
     assert.equal(
       this.element.textContent.trim().includes('89% cloudiness'),
       true

@@ -36,6 +36,6 @@ export default class ForecastDetailsController extends Controller {
   }
 
   get hasErrors() {
-    return !!this.model.cod;
+    return this.model.cod !== '200';
   }
 }

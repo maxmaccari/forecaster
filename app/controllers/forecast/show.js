@@ -14,6 +14,6 @@ export default class ForecastShowController extends Controller {
   }
 
   get hasErrors() {
-    return !!this.model.currentWeather.cod;
+    return this.model.currentWeather.cod !== 200;
   }
 }
