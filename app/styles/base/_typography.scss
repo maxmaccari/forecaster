@@ -35,14 +35,14 @@ a {
 
 .display-3 {
   font-size: 1.5em;
-  line-height: 1.5em;
+  line-height: 1em;
   font-weight: 700;
 }
 
 .display-4 {
   font-size: 1.125em;
   font-weight: 300;
-  line-height: 1.5em;
+  line-height: 1em;
 }
 
 .title {
@@ -60,4 +60,26 @@ a {
   font-size: 0.875em;
   font-weight: 300;
   line-height: 1.5em;
+}
+
+.caption {
+  font-size: 0.625em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.text-secondary {
+  color: $color-secondary;
+}
+
+.text-grey {
+  color: $color-grey;
+}
+
+.text-grey-darker {
+  color: $color-grey-darker;
 }
