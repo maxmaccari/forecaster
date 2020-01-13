@@ -1,7 +1,11 @@
 import Component from '@glimmer/component';
 import moment from 'moment';
+import { action } from '@ember/object';
+import { inject as service } from '@ember/service';
 
 export default class NextDaysCardComponent extends Component {
+  @service router;
+
   get date() {
     return moment(this.args.weather.date).format('dddd D');
   }
@@ -16,5 +20,14 @@ export default class NextDaysCardComponent extends Component {
     }
 
     return this.args.weather.weathers[bestWeatherIndex];
+  }
+
+  @action
+  goToForecastDay() {
+    this.router.transitionTo(
+      'forecast.details',
+      this.router.currentRoute.params.city,
+      this.args.weather.date
+    );
   }
 }
