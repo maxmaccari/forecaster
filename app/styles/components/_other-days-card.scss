@@ -1,11 +1,12 @@
-.next-days-card {
+.other-days-card {
   background-color: $color-accent;
   color: $color-white;
   cursor: pointer;
   opacity: 0.9;
   padding: 8px;
   position: relative;
-  width: 135px;
+  width: 210px;
+  display: flex;
 
   &::after {
     background-image: url('/icons/circle-right.svg');
@@ -23,37 +24,31 @@
     opacity: 1;
   }
 
-  &__date {
+  .other-days-card__icon {
+    margin-right: 8px;
+    width: 75px;
+  }
+
+  .other-days-card__date {
     font-size: 0.875em;
     font-weight: 300;
   }
 
-  &__icon {
-    display: block;
-    margin-top: 8px;
-    margin: auto;
-    width: 84px;
+  .other-days-card__temperature {
+    font-size: 1.125em;
+    font-weight: 500;
+    margin-top: 16px;
   }
 
-  &__temperature {
-    font-size: 1.125em;
-    margin-top: 8px;
-  }
-  &__situation {
-    font-size: 0.685em;
+  .other-days-card__situation {
+    font-size: 0.625em;
     font-weight: 300;
     margin-top: 4px;
   }
-  &__rain-chances {
-    font-size: 0.685em;
+
+  .other-days-card__rain-chances {
+    font-size: 0.5em;
     font-weight: 300;
-    margin-top: 4px;
-    opacity: 0.8;
-  }
-  &__low-temperature {
-    font-size: 0.685em;
-    font-weight: 300;
-    margin-top: 8px;
     opacity: 0.8;
   }
 }
