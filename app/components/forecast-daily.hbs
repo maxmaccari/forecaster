@@ -1,0 +1,14 @@
+<div class="forecast-daily">
+  <h3 class="body-2 space-mb-1">Next 24 hours summary</h3>
+  {{#each dailyList as |daily|}}
+  <div class="forecast-daily__item">
+    <img src="/icons/{{ get-weather-icon daily.weather.firstObject.icon }}.svg" alt="Cloudy Icon"
+      class="forecast-daily__item-icon">
+    <div class="forecast-daily__item-data">
+      <div class="display-3">{{ round daily.main.temp }}º</div>
+      <div class="body-1 space-mt-1">{{ hour daily.dt_txt }}</div>
+      <div class="caption text-grey">{{ daily.clouds.all }}% cloudiness</div>
+    </div>
+  </div>
+  {{/each}}
+</div>

@@ -10,6 +10,6 @@ export default class ForecastShowController extends Controller {
   }
 
   get currentDate() {
-    return moment(this.weather.dt).format('dddd D');
+    return moment(this.weather.dt_txt).format('dddd D');
   }
 }

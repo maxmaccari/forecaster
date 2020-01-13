@@ -34,31 +34,8 @@
         </div>
       </div>
 
-      <div class="forecast-daily align-bottom space-ml-4">
-        <div class="forecast-daily__item">
-          <img src="/icons/021-cloudy-1.svg" alt="Cloudy Icon" class="forecast-daily__item-icon">
-          <div class="forecast-daily__item-data">
-            <div class="display-3">9º</div>
-            <div class="body-1 space-mt-1">8:00 AM</div>
-            <div class="caption text-grey">0% chance of rain</div>
-          </div>
-        </div>
-        <div class="forecast-daily__item">
-          <img src="/icons/021-cloudy-1.svg" alt="Cloudy Icon" class="forecast-daily__item-icon">
-          <div class="forecast-daily__item-data">
-            <div class="display-3">9º</div>
-            <div class="body-1 space-mt-1">8:00 AM</div>
-            <div class="caption text-grey">0% chance of rain</div>
-          </div>
-        </div>
-        <div class="forecast-daily__item">
-          <img src="/icons/021-cloudy-1.svg" alt="Cloudy Icon" class="forecast-daily__item-icon">
-          <div class="forecast-daily__item-data">
-            <div class="display-3">9º</div>
-            <div class="body-1 space-mt-1">8:00 AM</div>
-            <div class="caption text-grey">0% chance of rain</div>
-          </div>
-        </div>
+      <div class="align-bottom space-ml-4">
+        <ForecastDaily @forecast={{ this.model.forecast }} />
       </div>
     </div>
 
