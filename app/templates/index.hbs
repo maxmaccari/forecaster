@@ -1,12 +1,14 @@
-<div class="container container-background">
+<div class="container has-small-panel container-background">
   <div class="panel panel--dense panel--translucid panel--small">
     <div class="align-center space-mb-2"><img src="img/logo.svg" alt="Forecaster"></div>
 
     <hr class="separator space-mb-3">
 
     <div class="input-group">
-      <Input class="input-control" placeholder="Where are you now?" @type="text" @value={{this.cityName}} @enter={{ this.goToForecast }} />
-      <button type="submit" class="btn input-group__after" {{ on 'click' this.goToForecast }} disabled={{ this.buttonDisabled }}>Go</button>
+      <Input class="input-control" placeholder="Where are you now?" @type="text" @value={{this.cityName}}
+        @enter={{ this.goToForecast }} />
+      <button type="submit" class="btn input-group__after" {{ on 'click' this.goToForecast }}
+        disabled={{ this.buttonDisabled }}>Go</button>
     </div>
 
     <hr class="separator space-mt-3 space-mb-2">

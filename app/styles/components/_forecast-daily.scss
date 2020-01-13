@@ -3,6 +3,7 @@
     align-items: flex-start;
     border-right: 1px solid $color-grey;
     display: inline-flex;
+    flex-wrap: wrap;
     margin-right: 8px;
     width: 140px;
 
@@ -19,5 +20,14 @@
 
   &__item-data {
     margin-left: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .forecast-daily {
+    flex-wrap: wrap;
+    &__item {
+      border-right: none;
+    }
   }
 }

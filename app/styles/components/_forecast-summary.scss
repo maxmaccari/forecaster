@@ -1,6 +1,7 @@
 .forecast-summary {
   &__top {
     display: flex;
+    flex-wrap: wrap;
 
     &-col {
       margin-left: 8px;
@@ -33,5 +34,22 @@
     div:first-child {
       margin-bottom: 8px;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .forecast-summary {
+    &__date {
+      border-left: none;
+    }
+    &__min-and-max {
+      border-left: none;
+    }
+  }
+
+  .forecast-controls {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
   }
 }
