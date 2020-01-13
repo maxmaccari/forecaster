@@ -1,10 +1,10 @@
 .forecast-daily {
   &__item {
-    width: 140px;
-    display: inline-flex;
     align-items: flex-start;
     border-right: 1px solid $color-grey;
+    display: inline-flex;
     margin-right: 8px;
+    width: 140px;
 
     &:last-child {
       border-right: none;
@@ -13,8 +13,8 @@
   }
 
   &__item-icon {
-    width: 24px;
     vertical-align: top;
+    width: 24px;
   }
 
   &__item-data {

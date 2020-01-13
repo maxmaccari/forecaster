@@ -1,8 +1,8 @@
 .forecast-details {
   &__item {
-    display: inline-flex;
     align-items: flex-start;
     border-right: 1px solid $color-grey;
+    display: inline-flex;
     margin-right: 8px;
     padding-right: 8px;
 
@@ -13,8 +13,8 @@
   }
 
   &__item-icon {
-    width: 24px;
     vertical-align: top;
+    width: 24px;
   }
 
   &__item-data {

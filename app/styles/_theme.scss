@@ -1,4 +1,5 @@
 .container-background {
-  background: url('/img/morning_photo.jpg') #3f3f3f;
+  background-color: $color-accent;
+  background-image: url('/img/morning_photo.jpg');
   background-size: cover;
 }
