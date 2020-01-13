@@ -29,7 +29,7 @@
 @import 'components/forecast-summary';
 @import 'components/inputs';
 @import 'components/next-days-card';
-@import 'components/other-days-card';
+@import 'components/next-days';
 @import 'components/panel';
 @import 'components/separator';
 @import 'components/weather-hour';
@@ -39,11 +39,6 @@
 //-------------
 @import 'utils/spaces';
 @import 'utils/alignments';
-
-//-------------
-// Pages
-//-------------
-@import 'pages/forecast';
 
 //-------------
 // Themes
