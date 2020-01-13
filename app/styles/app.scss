@@ -1,1 +1,35 @@
-@import 'normalize';
+//-------------
+// Abstract
+//-------------
+@import 'variables';
+
+//-------------
+// Vendors
+//-------------
+@import 'vendors/normalize';
+
+//-------------
+// Base
+//-------------
+@import 'base/typography';
+@import 'base/elements';
+
+//-------------
+// Layout
+//-------------
+@import 'layout/spaces';
+
+//-------------
+// Components
+//-------------
+@import 'components/buttons';
+@import 'components/inputs';
+
+//-------------
+// Utils
+//-------------
+
+//-------------
+// Pages
+//-------------
+@import 'pages/home';

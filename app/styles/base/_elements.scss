@@ -1,0 +1,12 @@
+a {
+  color: $color-primary;
+
+  &:hover,
+  &:visited {
+    color: $color-accent;
+  }
+}
+
+p {
+  margin: 0;
+}

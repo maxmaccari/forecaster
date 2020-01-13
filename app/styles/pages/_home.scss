@@ -1,0 +1,19 @@
+.home-container {
+  width: 100%;
+  height: 100vh;
+  background: url('/img/morning_photo.jpg') #3f3f3f;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-panel {
+  background-color: $color-secondary;
+  opacity: 0.8;
+  width: 466px;
+  padding: 24px;
+  &__logo {
+    text-align: center;
+  }
+}

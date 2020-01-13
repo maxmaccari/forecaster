@@ -1,0 +1,23 @@
+.input-control {
+  background-color: $color-white;
+  border: 1px solid $color-grey;
+  color: $color-primary;
+  font-size: 1.125em;
+  padding: 12px 9px;
+
+  &::placeholder {
+    color: $color-grey-darker;
+  }
+}
+
+.input-group {
+  display: flex;
+
+  & .input-control {
+    flex-grow: 1;
+  }
+
+  & .input-group__after {
+    margin-left: 8px;
+  }
+}
