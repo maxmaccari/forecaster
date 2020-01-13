@@ -4,3 +4,60 @@ body {
   font-size: $font-base-size;
   line-height: $font-base-line-height;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  color: $color-primary;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.display-1 {
+  font-size: 6em;
+  line-height: 1em;
+}
+
+.display-2 {
+  font-size: 3em;
+  line-height: 1em;
+}
+
+.display-3 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+
+.display-4 {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+.title {
+  font-size: 1.125em;
+  line-height: 1.5em;
+}
+
+.body-1 {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+.body-2 {
+  font-size: 0.875em;
+  font-weight: 300;
+  line-height: 1.5em;
+}

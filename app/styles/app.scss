@@ -11,8 +11,8 @@
 //-------------
 // Base
 //-------------
-@import 'base/typography';
 @import 'base/elements';
+@import 'base/typography';
 
 //-------------
 // Layout
@@ -25,6 +25,7 @@
 @import 'components/buttons';
 @import 'components/inputs';
 @import 'components/panel';
+@import 'components/separator';
 
 //-------------
 // Utils
