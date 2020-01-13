@@ -11,5 +11,6 @@ Router.map(function() {
 
   this.route('forecast', function() {
     this.route('show', { path: '/:city_name' });
+    this.route('details', { path: '/:city_name/:date' });
   });
 });

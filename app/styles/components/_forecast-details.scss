@@ -1,0 +1,23 @@
+.forecast-details {
+  &__item {
+    display: inline-flex;
+    align-items: flex-start;
+    border-right: 1px solid $color-grey;
+    margin-right: 8px;
+    padding-right: 8px;
+
+    &:last-child {
+      border-right: none;
+      margin-right: 0;
+    }
+  }
+
+  &__item-icon {
+    width: 24px;
+    vertical-align: top;
+  }
+
+  &__item-data {
+    margin-left: 8px;
+  }
+}
