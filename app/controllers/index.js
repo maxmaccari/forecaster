@@ -10,4 +10,8 @@ export default class IndexController extends Controller {
     this.transitionToRoute('forecast.show', this.cityName);
     this.cityName = '';
   }
+
+  get buttonDisabled() {
+    return !this.cityName;
+  }
 }
