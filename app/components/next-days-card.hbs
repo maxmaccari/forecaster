@@ -2,10 +2,10 @@
   <div class="next-days-card__date">
     {{ this.date }}
   </div>
-  <img src="/icons/{{ get-weather-icon this.weather.weather.firstObject.icon }}.svg"
-    alt="{{ this.weather.weather.firstObject.description }} icon" class="next-days-card__icon">
-  <div class="next-days-card__temperature">{{ round this.weather.main.temp }}º</div>
-  <div class="next-days-card__situation">{{ capitalize this.weather.weather.firstObject.description }}</div>
-  <div class="next-days-card__rain-chances">{{ this.weather.clouds.all }}% cloudiness</div>
-  <div class="next-days-card__low-temperature">{{ round this.weather.main.temp_min }}º low</div>
+  <img src="/icons/{{ get-weather-icon this.entry.weather.firstObject.icon }}.svg"
+    alt="{{ this.entry.weather.firstObject.description }} icon" class="next-days-card__icon">
+  <div class="next-days-card__temperature">{{ round this.entry.main.temp }}º</div>
+  <div class="next-days-card__situation">{{ capitalize this.entry.weather.firstObject.description }}</div>
+  <div class="next-days-card__rain-chances">{{ this.entry.clouds.all }}% cloudiness</div>
+  <div class="next-days-card__low-temperature">{{ round this.entry.main.temp_min }}º low</div>
 </div>

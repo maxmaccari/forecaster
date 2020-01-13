@@ -10,7 +10,7 @@ export default class NextDaysCardComponent extends Component {
     return moment(this.args.weather.date).format('dddd D');
   }
 
-  get weather() {
+  get entry() {
     const bestWeatherIndex = this.args.weather.weathers.findIndex((weather) => {
       return weather.dt_txt.includes('12:00:00');
     });
