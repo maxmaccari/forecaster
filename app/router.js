@@ -8,4 +8,8 @@ export default class Router extends EmberRouter {
 
 Router.map(function() {
   this.route('credits');
+
+  this.route('forecast', function() {
+    this.route('show', { path: '/:city_name' });
+  });
 });
