@@ -21,6 +21,7 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+    apiKey: process.env.API_KEY,
   };
 
   if (environment === 'development') {

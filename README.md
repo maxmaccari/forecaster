@@ -21,9 +21,13 @@ You will need the following things properly installed on your computer.
 - `cd forecaster`
 - `npm install`
 
+## Before run
+
+You must have an free API on https://home.openweathermap.org/ to run this application.
+
 ## Running / Development
 
-- `ember serve`
+- API_KEY=[your open weather map api key] `npm start`
 - Visit your app at [http://localhost:4200](http://localhost:4200).
 - Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
@@ -49,7 +53,8 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+You must have an account at firebase to deploy the application.
+You can use `firebase login` and `firebase deploy` to deploy the application.
 
 ## Further Reading / Useful Links
 

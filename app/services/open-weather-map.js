@@ -1,7 +1,8 @@
+import ENV from 'forecaster/config/environment';
 import Service from '@ember/service';
 
 export default class OpenWeatherMapService extends Service {
-  apiKey = 'faa4af87e4918eba4c099e4223f88913';
+  apiKey = ENV.apiKey;
 
   getForecastFrom(cityName) {
     return fetch(
