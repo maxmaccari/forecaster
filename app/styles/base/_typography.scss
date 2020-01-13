@@ -17,9 +17,10 @@ p {
 
 a {
   color: $color-primary;
+  opacity: 0.75;
 
   &:hover {
-    color: $color-accent;
+    opacity: 1;
   }
 }
 
