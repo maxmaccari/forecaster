@@ -10,25 +10,25 @@
         <div class="forecast-summary col">
           <div class="forecast-summary__top">
             <div class="display-1 forecast-summary__degrees">
-              8º
+              {{ round this.weather.main.temp }}º
             </div>
             <div class="forecast-summary__top-col">
-              <div class="display-4 forecast-summary__date">Thursday 8</div>
+              <div class="display-4 forecast-summary__date">{{ this.currentDate }}</div>
               <div class="forecast-summary__weather-summary">
-                <img class="forecast-summary__weather-summary-icon" src="/icons/021-cloudy-1.svg" alt="Cloudy Icon"
+                <img class="forecast-summary__weather-summary-icon" src="/icons/{{get-weather-icon this.weather.weather.firstObject.icon }}.svg" alt="{{ this.weather.weather.firstObject.description }} icon"
                   width="32">
                 <div class="body-2">
-                  <div>Mostly Cloud</div>
-                  <div>Feels like: 1º</div>
+                  <div>{{ capitalize this.weather.weather.firstObject.description }}</div>
+                  <div>Feels like: {{ round this.weather.main.feels_like }}º</div>
                 </div>
               </div>
             </div>
             <div class="forecast-summary__top-col forecast-summary__min-and-max">
-              <div class="display-4">Min: <b>-1º</b></div>
-              <div class="display-4">Max: <b>13º</b></div>
+              <div class="display-4">Min: <b>{{ round this.weather.main.temp_min }}º</b></div>
+              <div class="display-4">Max: <b>{{ round this.weather.main.temp_max }}º</b></div>
             </div>
           </div>
-          <div class="display-2 space-mt-1">New York</div>
+          <div class="display-2 space-mt-1">{{ this.model.city.name }}</div>
         </div>
 
         <div class="forecast-details row align-bottom space-ml-5">
@@ -36,264 +36,41 @@
             <img src="/icons/wind.svg" alt="Wind Direction Icon" class="forecast-details__item-icon">
             <div class="forecast-details__item-data">
               <div class="subtitle-1">Wind Direction</div>
-              <div class="body-1 space-mt-1">50mph</div>
+              <div class="body-1 space-mt-1">{{ this.weather.wind.speed }} km/h</div>
             </div>
           </div>
           <div class="forecast-details__item">
             <img src="/icons/humidity.svg" alt="Humidity Icon" class="forecast-details__item-icon">
             <div class="forecast-details__item-data">
               <div class="subtitle-1">Humidity</div>
-              <div class="body-1 space-mt-1">75%</div>
+              <div class="body-1 space-mt-1">{{ this.weather.main.humidity }}%</div>
             </div>
           </div>
           <div class="forecast-details__item">
             <img src="/icons/meter.svg" alt="Pressure Icon" class="forecast-details__item-icon">
             <div class="forecast-details__item-data">
               <div class="subtitle-1">Pressure</div>
-              <div class="body-1 space-mt-1">150 bar</div>
+              <div class="body-1 space-mt-1">{{ this.weather.main.pressure }} bar</div>
             </div>
           </div>
         </div>
       </div>
 
-      <h2 class="title space-mt-5">24 hours weather</h2>
+      <h2 class="title space-mt-5">Next Hours Forecast</h2>
 
-      <div class="all-day-weather space-mt-4">
-        <div class="all-day-weather__period">
-          <h3 class="all-day-weather__period-name subtitle-2">Dawn</h3>
+      <div class="next-hours-forecast space-mt-4">
 
+        {{#each todayForecast as |weather| }}
           <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
+            <img src="/icons/{{ get-weather-icon weather.weather.firstObject.icon }}.svg" alt="{{ weather.weather.firstObject.description }} icon" class="weather-hour__icon">
             <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
+              <div class="weather-hour__time">{{ hour weather.dt_txt }}</div>
               <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
+                <b>{{ weather.main.temp }}º</b> {{ capitalize weather.weather.firstObject.description }}
               </div>
             </div>
           </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="all-day-weather__period">
-          <h3 class="all-day-weather__period-name subtitle-2">Morning</h3>
-
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="all-day-weather__period">
-          <h3 class="all-day-weather__period-name subtitle-2">Afternoon</h3>
-
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="all-day-weather__period">
-          <h3 class="all-day-weather__period-name subtitle-2">Night</h3>
-
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/021-cloudy-1.svg" alt="Cloudy icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">00:00 AM</div>
-              <div class="weather-hour__weather">
-                <b>8º</b> Mostly Cloud
-              </div>
-            </div>
-          </div>
-        </div>
+        {{/each}}
       </div>
     </div>
   </div>
