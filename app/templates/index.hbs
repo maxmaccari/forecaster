@@ -1,14 +1,16 @@
 <div class="container container-background">
   <div class="panel panel--dense panel--translucid panel--small">
     <div class="align-center space-mb-2"><img src="img/logo.svg" alt="Forecaster"></div>
+    
     <hr class="separator space-mb-3">
-    <form action="#" class="city-form">
-      <div class="input-group">
-        <input class="input-control" type="text" placeholder="Where are you now?">
-        <button type="submit" class="btn input-group__after">Go</button>
-      </div>
-    </form>
+
+    <div class="input-group">
+      <Input class="input-control" placeholder="Where are you now?" @type="text" @value={{this.cityName}} />
+      <button type="submit" class="btn input-group__after" {{ on 'click' this.goToForecast }}>Go</button>
+    </div>
+
     <hr class="separator space-mt-3 space-mb-2">
+
     <p class="body-1">Designed and developed by
       <a href="https://www.linkedin.com/in/maxmaccari/" target="_blank" rel="noopener noreferrer">Maxsuel Maccari</a>
     </p>
