@@ -18,19 +18,25 @@
 // Layout
 //-------------
 @import 'layout/container';
-@import 'layout/spaces';
 
 //-------------
 // Components
 //-------------
 @import 'components/buttons';
 @import 'components/inputs';
+@import 'components/panel';
 
 //-------------
 // Utils
 //-------------
+@import 'utils/spaces';
+@import 'utils/alignments';
 
 //-------------
 // Pages
 //-------------
-@import 'pages/home';
+
+//-------------
+// Themes
+//-------------
+@import 'theme';

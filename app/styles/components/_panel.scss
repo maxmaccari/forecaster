@@ -1,0 +1,17 @@
+.panel {
+  background-color: $color-secondary;
+  padding: 32px;
+  width: 954px;
+
+  &--dense {
+    padding: 24px;
+  }
+
+  &--small {
+    width: 466px;
+  }
+
+  &--translucid {
+    opacity: 0.8;
+  }
+}
