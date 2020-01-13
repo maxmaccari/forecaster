@@ -1,0 +1,17 @@
+.weather-hour {
+  display: flex;
+
+  &__icon {
+    width: 32px;
+    margin-right: 8px;
+  }
+
+  &__time {
+    font-size: 0.875em;
+    font-weight: 300;
+  }
+
+  &__weather {
+    font-size: 0.875em;
+  }
+}

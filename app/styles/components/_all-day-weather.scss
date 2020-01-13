@@ -1,0 +1,13 @@
+.all-day-weather {
+  display: flex;
+  justify-content: space-between;
+
+  &__period {
+    border-right: 1px solid $color-grey;
+    padding-right: 42px;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}

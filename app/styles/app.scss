@@ -22,6 +22,7 @@
 //-------------
 // Components
 //-------------
+@import 'components/all-day-weather';
 @import 'components/buttons';
 @import 'components/forecast-daily';
 @import 'components/forecast-details';
@@ -31,6 +32,7 @@
 @import 'components/other-days-card';
 @import 'components/panel';
 @import 'components/separator';
+@import 'components/weather-hour';
 
 //-------------
 // Utils
