@@ -1,4 +1,3 @@
-{{log this.model.forecast}}
 <div class="container container-background">
   <div class="panel">
     <div class="row">
@@ -9,7 +8,7 @@
               {{ round this.model.currentWeather.main.temp }}º
             </div>
             <div class="forecast-summary__top-col">
-              <div class="display-4 forecast-summary__date">Thursday 8</div>
+              <div class="display-4 forecast-summary__date">{{ this.currentDate }}</div>
               <div class="forecast-summary__weather-summary">
                 <img class="forecast-summary__weather-summary-icon"
                   src="/icons/{{ get-weather-icon this.weather.icon }}.svg" alt="{{this.weather.description}} icon">

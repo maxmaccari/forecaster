@@ -1,4 +1,5 @@
 import Controller from '@ember/controller';
+import moment from 'moment';
 
 export default class ForecastShowController extends Controller {
   get weather() {
@@ -6,5 +7,9 @@ export default class ForecastShowController extends Controller {
       return this.model.currentWeather.weather[0];
 
     return null;
+  }
+
+  get currentDate() {
+    return moment(this.weather.dt).format('dddd D');
   }
 }
