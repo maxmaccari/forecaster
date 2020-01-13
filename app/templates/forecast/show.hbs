@@ -1,3 +1,4 @@
+{{log this.model.forecast}}
 <div class="container container-background">
   <div class="panel">
     <div class="row">
@@ -5,7 +6,7 @@
         <div class="forecast-summary">
           <div class="forecast-summary__top">
             <div class="display-1 forecast-summary__degrees">
-              {{ round this.model.main.temp }}º
+              {{ round this.model.currentWeather.main.temp }}º
             </div>
             <div class="forecast-summary__top-col">
               <div class="display-4 forecast-summary__date">Thursday 8</div>
@@ -14,16 +15,16 @@
                   src="/icons/{{ get-weather-icon this.weather.icon }}.svg" alt="{{this.weather.description}} icon">
                 <div class="body-2">
                   <div>{{ capitalize this.weather.description }}</div>
-                  <div>Feels like: {{ round this.model.main.feels_like }}º</div>
+                  <div>Feels like: {{ round this.model.currentWeather.main.feels_like }}º</div>
                 </div>
               </div>
             </div>
             <div class="forecast-summary__top-col forecast-summary__min-and-max">
-              <div class="display-4">Min: <b>{{ round this.model.main.temp_min }}º</b></div>
-              <div class="display-4">Max: <b>{{ round this.model.main.temp_max }}º</b></div>
+              <div class="display-4">Min: <b>{{ round this.model.currentWeather.main.temp_min }}º</b></div>
+              <div class="display-4">Max: <b>{{ round this.model.currentWeather.main.temp_max }}º</b></div>
             </div>
           </div>
-          <div class="display-2 space-mt-1">{{ this.model.name }}</div>
+          <div class="display-2 space-mt-1">{{ this.model.currentWeather.name }}</div>
         </div>
 
         <div class="forecast-controls">
