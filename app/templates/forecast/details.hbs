@@ -15,8 +15,9 @@
             <div class="forecast-summary__top-col">
               <div class="display-4 forecast-summary__date">{{ this.currentDate }}</div>
               <div class="forecast-summary__weather-summary">
-                <img class="forecast-summary__weather-summary-icon" src="/icons/{{get-weather-icon this.weather.weather.firstObject.icon }}.svg" alt="{{ this.weather.weather.firstObject.description }} icon"
-                  width="32">
+                <img class="forecast-summary__weather-summary-icon"
+                  src="/icons/{{get-weather-icon this.weather.weather.firstObject.icon }}.svg"
+                  alt="{{ this.weather.weather.firstObject.description }} icon" width="32">
                 <div class="body-2">
                   <div>{{ capitalize this.weather.weather.firstObject.description }}</div>
                   <div>Feels like: {{ round this.weather.main.feels_like }}º</div>
@@ -60,16 +61,17 @@
 
       <div class="next-hours-forecast space-mt-4">
 
-        {{#each todayForecast as |weather| }}
-          <div class="weather-hour space-mt-2">
-            <img src="/icons/{{ get-weather-icon weather.weather.firstObject.icon }}.svg" alt="{{ weather.weather.firstObject.description }} icon" class="weather-hour__icon">
-            <div class="col">
-              <div class="weather-hour__time">{{ hour weather.dt_txt }}</div>
-              <div class="weather-hour__weather">
-                <b>{{ weather.main.temp }}º</b> {{ capitalize weather.weather.firstObject.description }}
-              </div>
+        {{#each this.todayForecast as |weather| }}
+        <div class="weather-hour space-mt-2">
+          <img src="/icons/{{ get-weather-icon weather.weather.firstObject.icon }}.svg"
+            alt="{{ weather.weather.firstObject.description }} icon" class="weather-hour__icon">
+          <div class="col">
+            <div class="weather-hour__time">{{ hour weather.dt_txt }}</div>
+            <div class="weather-hour__weather">
+              <b>{{ weather.main.temp }}º</b> {{ capitalize weather.weather.firstObject.description }}
             </div>
           </div>
+        </div>
         {{/each}}
       </div>
     </div>
