@@ -1,5 +1,8 @@
 <div class="container container-background">
   <div class="panel">
+    {{#if this.hasErrors}}
+    <ErrorsMessage />
+    {{else}}
     <div class="row">
       <div class="col">
         <div class="forecast-summary">
@@ -41,5 +44,6 @@
 
     <h2 class="title space-mt-4 space-mb-2">Next 6 days</h2>
     <NextDays @forecast={{ this.model.forecast }} />
+    {{/if}}
   </div>
 </div>

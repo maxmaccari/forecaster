@@ -12,4 +12,8 @@ export default class ForecastShowController extends Controller {
   get currentDate() {
     return moment(this.weather.dt_txt).format('dddd D');
   }
+
+  get hasErrors() {
+    return !!this.model.currentWeather.cod;
+  }
 }

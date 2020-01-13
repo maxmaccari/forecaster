@@ -1,5 +1,10 @@
 <div class="container container-background">
   <div class="panel row">
+    {{#if this.hasErrors}}
+    <div class="col">
+      <ErrorsMessage />
+    </div>
+    {{else}}
     <div class="col space-mr-2">
       <LinkTo @route="forecast.show" @model={{this.cityName}}>
         <img src="/icons/circle-left.svg" alt="Back">
@@ -75,5 +80,6 @@
         {{/each}}
       </div>
     </div>
+    {{/if}}
   </div>
 </div>

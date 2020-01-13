@@ -34,4 +34,8 @@ export default class ForecastDetailsController extends Controller {
       return weather.dt_txt.substr(0, 10) === this.dateParam;
     });
   }
+
+  get hasErrors() {
+    return !!this.model.cod;
+  }
 }
