@@ -19,5 +19,10 @@
 @media (max-width: 768px) {
   .panel {
     padding: 8px;
+    min-height: 100%;
+
+    &--dense {
+      min-height: 0;
+    }
   }
 }
