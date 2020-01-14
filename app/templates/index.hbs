@@ -6,7 +6,7 @@
 
     <div class="input-group">
       <Input class="input-control" placeholder="Where are you now?" type="text" @value={{this.cityName}}
-        @enter={{ fn this.goToForecast }} />
+        @enter={{ fn this.goToForecast }} disabled={{this.loading}} />
       <button type="submit" class="btn input-group__after" {{ on 'click' this.goToForecast }}
         disabled={{ this.buttonDisabled }}>Go</button>
     </div>

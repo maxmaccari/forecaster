@@ -4,6 +4,7 @@ import { tracked } from '@glimmer/tracking';
 
 export default class IndexController extends Controller {
   @tracked cityName = '';
+  @tracked loading = false;
 
   @action
   goToForecast() {
@@ -12,6 +13,6 @@ export default class IndexController extends Controller {
   }
 
   get buttonDisabled() {
-    return !this.cityName;
+    return !this.cityName || this.loading;
   }
 }
