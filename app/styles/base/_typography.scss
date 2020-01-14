@@ -95,3 +95,13 @@ a {
 .text-grey-darker {
   color: $color-grey-darker;
 }
+
+@media (max-width: 768px) {
+  .display-1 {
+    font-size: 5em;
+  }
+
+  .display-2 {
+    font-size: 2em;
+  }
+}

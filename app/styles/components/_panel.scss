@@ -15,3 +15,9 @@
     background-color: $color-secondary-translucid;
   }
 }
+
+@media (max-width: 768px) {
+  .panel {
+    padding: 8px;
+  }
+}

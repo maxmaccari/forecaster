@@ -29,3 +29,37 @@ $spaces: 8px 16px 24px 32px 64px;
     margin-bottom: #{$space};
   }
 }
+
+@media (max-width: 768px) {
+  $spaces: 4px 8px 12px 16px 32px;
+
+  @for $i from 1 through length($spaces) {
+    $space: nth($spaces, $i);
+
+    .space-mt-#{$i} {
+      margin-top: #{$space};
+    }
+
+    .space-mb-#{$i} {
+      margin-bottom: #{$space};
+    }
+
+    .space-ml-#{$i} {
+      margin-left: #{$space};
+    }
+
+    .space-mr-#{$i} {
+      margin-right: #{$space};
+    }
+
+    .space-mx-#{$i} {
+      margin-left: #{$space};
+      margin-right: #{$space};
+    }
+
+    .space-my-#{$i} {
+      margin-top: #{$space};
+      margin-bottom: #{$space};
+    }
+  }
+}

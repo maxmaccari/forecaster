@@ -5,3 +5,9 @@
   justify-content: space-around;
   max-height: 250px;
 }
+
+@media (max-width: 768px) {
+  .next-hours-forecast {
+    max-height: none;
+  }
+}
