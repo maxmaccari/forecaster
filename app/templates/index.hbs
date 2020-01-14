@@ -5,8 +5,8 @@
     <hr class="separator space-mb-3">
 
     <div class="input-group">
-      <Input class="input-control" placeholder="Where are you now?" @type="text" @value={{this.cityName}}
-        @enter={{ this.goToForecast }} />
+      <Input class="input-control" placeholder="Where are you now?" type="text" @value={{this.cityName}}
+        @enter={{ fn this.goToForecast }} />
       <button type="submit" class="btn input-group__after" {{ on 'click' this.goToForecast }}
         disabled={{ this.buttonDisabled }}>Go</button>
     </div>
