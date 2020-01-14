@@ -14,7 +14,7 @@ export default class ForecastShowRoute extends Route {
   }
 
   @action
-  async loading(transition, originRoute) {
+  async loading(transition) {
     let controller = this.controllerFor('index');
     controller.set('loading', true);
     controller.set('cityName', 'Loading...');
